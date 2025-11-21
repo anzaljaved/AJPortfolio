@@ -3,7 +3,8 @@ import { HiCode, HiCube, HiDatabase, HiMail, HiBriefcase } from "react-icons/hi"
 
 export const config = {
     developer: {
-        name: "M Anzal Javed",
+        name: "Anzal",
+        fullName: "M Anzal Javed",
     },
     social: {
         github: "AnzalJaved",
