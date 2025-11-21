@@ -110,7 +110,7 @@ const ContactButton = ({ isMobile = false, onLinkClick }) => (
         transition={{ delay: isMobile ? 0.5 : 0.4, duration: 0.5 }}
         onClick={onLinkClick}
     >
-
+        
     </motion.div>
 );
 
@@ -133,66 +133,57 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <div className="container mx-auto flex items-center justify-between md:px-64 px-4 sm:px-6">
-                    <Logo />
-                    <Navigation />
-                    <div className="hidden md:block">
-                        <ContactButton />
-                    </div>
+                <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex items-center justify-between h-16">
+                        <Logo />
+                        <div className="flex items-center space-x-4">
+                            <Navigation />
+                            <div className="hidden md:block ml-4">
+                                <ContactButton />
+                            </div>
+                        </div>
                     
-                    {/* Mobile Menu Button */}
-                    <button
-                        onClick={toggleMobileMenu}
-                        className="md:hidden p-2 text-gray-300 hover:text-white transition-colors"
-                        aria-label="Toggle menu"
-                    >
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={toggleMobileMenu}
+                            className="md:hidden ml-4 p-2 text-gray-300 hover:text-white transition-colors"
+                            aria-label="Toggle menu"
+                        >
                         {isMobileMenuOpen ? (
                             <HiX className="w-6 h-6" />
                         ) : (
                             <HiMenu className="w-6 h-6" />
                         )}
-                    </button>
+                        </button>
+                    </div>
                 </div>
             </motion.header>
 
             {/* Mobile Menu */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
-                    <>
-                        {/* Backdrop */}
+                    <motion.div
+                        className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm z-40 pt-20 px-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        onClick={closeMobileMenu}
+                    >
                         <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 md:hidden"
-                            onClick={closeMobileMenu}
-                        />
-                        
-                        {/* Mobile Menu Panel */}
-                        <motion.div
-                            initial={{ x: '100%' }}
-                            animate={{ x: 0 }}
-                            exit={{ x: '100%' }}
-                            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                            className="fixed top-0 right-0 h-full w-64 bg-black/95 backdrop-blur-md border-l border-white/10 z-50 md:hidden overflow-y-auto"
+                            className="bg-gray-900 rounded-xl p-6 max-w-sm mx-auto border border-gray-800"
+                            initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -20, opacity: 0 }}
+                            onClick={(e) => e.stopPropagation()}
                         >
-                            <div className="flex flex-col h-full p-6">
-                                {/* Mobile Logo */}
-                                <div className="mb-8">
-                                    <Logo isMobile={true} />
-                                </div>
-
-                                {/* Mobile Navigation */}
-                                <div className="flex-1">
-                                    <Navigation isMobile={true} onLinkClick={closeMobileMenu} />
-                                </div>
-
-                                {/* Mobile Contact Button */}
-                                <ContactButton isMobile={true} onLinkClick={closeMobileMenu} />
+                            <div className="flex flex-col items-center space-y-4">
+                                <Logo isMobile />
+                                <Navigation isMobile onLinkClick={closeMobileMenu} />
+                                <ContactButton isMobile onLinkClick={closeMobileMenu} />
                             </div>
                         </motion.div>
-                    </>
+                    </motion.div>
                 )}
             </AnimatePresence>
         </>
