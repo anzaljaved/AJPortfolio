@@ -74,7 +74,7 @@ const Logo = ({ isMobile = false }) => (
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
             >
-                <span className="hidden sm:inline">{config.developer.name} Javed</span>
+                <span className="hidden sm:inline">{config.developer.fullName}</span>
                 {/* <span className="sm:hidden">{config.developer.name}</span> */}
             </motion.span>
         </Link>
