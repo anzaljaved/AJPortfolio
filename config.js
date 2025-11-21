@@ -17,46 +17,37 @@ export const config = {
     projects: [
         {
             id: 1,
-            title: "Visual Note Taking Web App",
-            description: "A web application that allows users to take notes and save them in a visual format in an infinite whiteboard. Features include adding notes, drag and drop, todos, and grouping notes under columns.",
-            image: "/projects/project-1.webp",
-            technologies: ["HTML", "JavaScript" , "TypeScript"],
+            title: "Project Management and Team Collaborating System",
+            description: "A full-stack project management platform that enables Scrum-style collaboration between Admins, Team Leaders, and Members. It simplifies sprint planning, task assignment, and team communication within a single company environment.",
+            image: "/projects/TeamSphere.png",
+            technologies: ["JavaScript" , "TypeScript", "Tailwind CSS", "PHP", "MySQL", "HTML"],
             github: "#",
             demo: "#"
         },
         {
             id: 2,
-            title: "Real-time Collaborative Whiteboard",
-            description: "A next-generation collaborative whiteboard platform with infinite canvas, real-time synchronization, and advanced drawing tools. Supports video conferencing, screen sharing, and export to multiple formats. Built for remote teams and educators.",
-            image: "/projects/project-2.webp",
-            technologies: ["TypeScript", "WebRTC", "Socket.io", "Canvas API", "Node.js", "Redis"],
+            title: "Visual Note Taking Web App",
+            description: "A web application that allows users to take notes and save them in a visual format in an infinite whiteboard. Features include adding notes, drag and drop, todos, and grouping notes under columns.",
+            image: "/projects/SnapNote.png",
+            technologies: ["HTML", "JavaScript" , "TypeScript"],
             github: "#",
             demo: "https://snapnote-by-anzal.netlify.app"
         },
         {
             id: 3,
-            title: "Blockchain Voting System",
-            description: "A secure, transparent, and decentralized voting platform built on Ethereum. Features smart contract-based voting, anonymous ballots, real-time result tracking, and immutable audit trails. Ensures election integrity through cryptographic verification.",
-            image: "/projects/project-3.webp",
-            technologies: ["Solidity", "Web3.js", "React", "Ethereum", "IPFS", "MetaMask"],
+            title: "Health Archive",
+            description: "A unified digital Health Archive system that allows patients to carry a single ID to any hospital, enabling doctors to instantly access complete medical histories, prescriptions, and ongoing treatments. Designed with critical-condition indicators and real-time medication tracking, it ensures faster, safer, and more informed care across multiple healthcare providers.",
+            image: "/projects/HealthArchive.png",
+            technologies: ["JavaScript", "Tailwind CSS", "PHP", "MySQL", "HTML"],
             github: "#",
             demo: "#"
         },
         {
             id: 4,
-            title: "Cloud Infrastructure Dashboard",
-            description: "A comprehensive cloud management platform for monitoring, managing, and optimizing multi-cloud infrastructure. Features real-time metrics, cost analysis, automated scaling, and security compliance monitoring across AWS, Azure, and GCP.",
-            image: "/projects/project-4.webp",
-            technologies: ["Go", "Kubernetes", "Grafana", "Prometheus", "Terraform", "React"],
-            github: "#",
-            demo: "#"
-        },
-        {
-            id: 5,
-            title: "Neural Network Visualizer",
-            description: "An interactive web application for visualizing, training, and experimenting with neural networks. Features drag-and-drop architecture builder, real-time training visualization, model comparison tools, and export capabilities for production deployment.",
-            image: "/projects/project-5.webp",
-            technologies: ["Python", "TensorFlow.js", "D3.js", "Next.js", "WebGL", "TypeScript"],
+            title: "2D Unity Game",
+            description: "A 2D local multiplayer cat-themed platformer built using Unity and Cinemachine, featuring pixel art, dialogues, and mobile controls.",
+            image: "/projects/Liora.png",
+            technologies: ["Unity", "C#", "Cinemachine", "Pixel Art", "Mobile Controls"],
             github: "#",
             demo: "#"
         }
