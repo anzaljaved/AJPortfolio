@@ -56,7 +56,7 @@ const Logo = ({ isMobile = false }) => (
             href="/"
             className="flex items-center space-x-2 hover:opacity-90 transition-opacity"
         >
-            <motion.div
+            {/* <motion.div
                 whileHover={{ opacity:0.5 }}
                 whileTap={{ scale: 0.95 }}
             >
@@ -67,7 +67,7 @@ const Logo = ({ isMobile = false }) => (
                     alt='logo'
                     className={`${isMobile ? 'w-10 h-10' : 'w-12 h-12 sm:w-14 sm:h-14'} rounded-full`}
                 />
-            </motion.div>
+            </motion.div> */}
             <motion.span
                 className={`text-gray-300 font-semibold ${isMobile ? 'hidden' : 'text-base sm:text-lg'}`}
                 initial={{ opacity: 0 }}
