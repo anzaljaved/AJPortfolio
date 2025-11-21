@@ -3,10 +3,10 @@ import { HiCode, HiCube, HiDatabase, HiMail, HiBriefcase } from "react-icons/hi"
 
 export const config = {
     developer: {
-        name: "Huzaif",
+        name: "Anzal",
     },
     social: {
-        github: "huzaifahmedz",
+        github: "AnzalJaved",
         discord: "#"
     },
     NAV_ITEMS: [
@@ -17,10 +17,10 @@ export const config = {
     projects: [
         {
             id: 1,
-            title: "AI-Powered Code Review Assistant",
-            description: "An intelligent code review platform that uses machine learning to analyze pull requests, detect bugs, suggest optimizations, and enforce coding standards. Features real-time collaboration, automated testing integration, and comprehensive security scanning.",
+            title: "Visual Note Taking Web App",
+            description: "A web application that allows users to take notes and save them in a visual format in an infinite whiteboard. Features include adding notes, drag and drop, todos, and grouping notes under columns.",
             image: "/projects/project-1.webp",
-            technologies: ["Python", "TensorFlow", "React", "FastAPI", "PostgreSQL", "Docker"],
+            technologies: ["HTML", "JavaScript" , "TypeScript"],
             github: "#",
             demo: "#"
         },
@@ -31,7 +31,7 @@ export const config = {
             image: "/projects/project-2.webp",
             technologies: ["TypeScript", "WebRTC", "Socket.io", "Canvas API", "Node.js", "Redis"],
             github: "#",
-            demo: "#"
+            demo: "https://snapnote-by-anzal.netlify.app"
         },
         {
             id: 3,
@@ -138,14 +138,14 @@ export const config = {
         {
             icon: <FaGithub className="w-5 h-5" />,
             label: "GitHub",
-            value: "@huzaifahmedz",
-            link: `https://github.com/huzaifahmedz`
+            value: "@anzaljaved",
+            link: `https://github.com/anzaljaved`
         },
         {
             icon: <HiMail className="w-5 h-5" />,
             label: "Email",
-            value: "dev.huzaif@gmail.com",
-            link: "mailto:dev.huzaif@gmail.com"
+            value: "anzaljoffl@gmail.com",
+            link: "mailto:anzaljoffl@gmail.com"
         },
         {
             icon: <FaMapPin className="w-5 h-5" />,
