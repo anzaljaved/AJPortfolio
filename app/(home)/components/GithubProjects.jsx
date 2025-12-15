@@ -43,17 +43,8 @@ const languageColors = {
 const ITEMS_PER_PAGE = 6;
 const GITHUB_API_URL = `https://api.github.com/users/${config.social.github}/repos`;
 
-const getProjectSize = (index) => {
-    const sizes = [
-        "col-span-2 sm:col-span-1 md:col-span-2 row-span-1", // First project - wide
-        "col-span-1 sm:row-span-2 row-span-1", // Second project - tall
-        "col-span-1 row-span-1", // Third project - normal
-        "col-span-1 row-span-1", // Fourth project - normal
-        "col-span-1 row-span-1", // Fifth project - normal
-        "col-span-1 row-span-1", // Sixth project - normal
-    ];
-    return sizes[index % sizes.length];
-};
+// All projects will have the same size in the list view
+const getProjectSize = () => "w-full";
 
 const fetcher = async (url) => {
     const res = await fetch(url);
@@ -117,7 +108,7 @@ const ProjectCard = ({ project, size }) => {
             target="_blank"
             rel="noopener noreferrer"
             variants={itemAnimation}
-            className={`relative group ${size}`}
+            className={`relative group ${size} w-full`}
         >
             <div
                 className="
@@ -245,7 +236,7 @@ const GithubProjects = () => {
     const projects = React.useMemo(() => {
         if (!data) return [];
         const filtered = data
-            .filter(project => !project.fork && !project.private)
+            .filter(project => !project.fork && !project.private && !project.name.toLowerCase().includes('portfolio'))
             .sort((a, b) => {
                 // Sort by stargazers count first
                 if (b.stargazers_count !== a.stargazers_count) {
@@ -256,9 +247,9 @@ const GithubProjects = () => {
             })
             .slice(0, ITEMS_PER_PAGE * page);
         
-        return filtered.map((project, index) => ({
+        return filtered.map(project => ({
             ...project,
-            size: getProjectSize(index)
+            size: getProjectSize()
         }));
     }, [data, page]);
 
@@ -314,24 +305,30 @@ const GithubProjects = () => {
                         variants={containerAnimation}
                         initial="hidden"
                         animate="show"
-                        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 auto-rows-fr gap-3 sm:gap-4 w-full max-w-6xl mx-auto"
+                        className="flex flex-col gap-6 sm:gap-8 w-full max-w-4xl mx-auto"
                     >
                         {isLoading ? (
-                            Array(ITEMS_PER_PAGE).fill(0).map((_, index) => (
-                                <div key={index} className={getProjectSize(index)}>
+                            Array(3).fill(0).map((_, index) => (
+                                <div key={index} className="w-full">
                                     <ProjectSkeleton />
                                 </div>
                             ))
                         ) : error ? (
                             <ErrorAlert error={error} onRetry={handleRetry} />
-                        ) : (
+                        ) : projects.length > 0 ? (
                             projects.map((project) => (
-                                <ProjectCard key={project.id} project={project} size={project.size} />
+                                <div key={project.id} className="w-full">
+                                    <ProjectCard project={project} size={project.size} />
+                                </div>
                             ))
+                        ) : (
+                            <div className="text-center py-8 text-white/70">
+                                No projects found. Check back later!
+                            </div>
                         )}
                     </motion.div>
 
-                    <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mt-8 sm:mt-0">
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mt-12">
                         {!error && data?.length > projects.length && (
                             <Button
                                 variant="outline"

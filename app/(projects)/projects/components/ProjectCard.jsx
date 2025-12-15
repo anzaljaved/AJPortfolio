@@ -49,23 +49,25 @@ export const ProjectCard = ({ project, index }) => (
                 </div>
             </div>
 
-            <div className="flex items-center gap-3 pt-4">
-                <Button
-                    size="sm"
-                    className="rounded-full h-8 px-4 text-xs"
-                    asChild
-                >
-                    <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
+            {project.demo && project.demo !== '#' && (
+                <div className="flex items-center gap-3 pt-4">
+                    <Button
+                        size="sm"
+                        className="rounded-full h-8 px-4 text-xs"
+                        asChild
                     >
-                        Live Demo
-                        <FaExternalLinkAlt className="w-3 h-3" />
-                    </a>
-                </Button>
-            </div>
+                        <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2"
+                        >
+                            Live Demo
+                            <FaExternalLinkAlt className="w-3 h-3" />
+                        </a>
+                    </Button>
+                </div>
+            )}
         </div>
     </motion.div>
 );

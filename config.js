@@ -65,7 +65,7 @@ export const config = {
             image: "/projects/Liora.png",
             technologies: ["Unity", "C#", "Cinemachine", "Pixel Art", "Mobile Controls"],
             github: "#",
-            demo: "https://snapnote-by-anzal.netlify.app"
+            demo: "#"
         }
         
     ],

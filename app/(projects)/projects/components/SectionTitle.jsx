@@ -19,11 +19,10 @@ const SectionTitle = () => (
                     Featured Work & Projects
                 </h2>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                    A curated selection of my professional work and personal projects,
-                    showcasing expertise in{' '}
-                    <span className="text-primary">full-stack development</span>,{' '}
-                    <span className="text-primary">UI/UX design</span>, and{' '}
-                    <span className="text-primary">cloud architecture</span>.
+                    A curated list of my academic work and personal projects,
+                    showcasing experience in{' '}
+                    <span className="text-primary">Full-stack development</span>,{' '}
+                    <span className="text-primary">Game Development</span>.
                 </p>
             </div>
 
@@ -46,7 +45,7 @@ const SectionTitle = () => (
                 </Button>
             </div>
         </div>
-
+{/* 
         <div className="flex items-center gap-6 pt-2 overflow-x-auto pb-2 scrollbar-hide">
             <div className="space-y-1 flex-shrink-0">
                 <span className="text-xl sm:text-2xl font-bold text-primary">50+</span>
@@ -61,7 +60,7 @@ const SectionTitle = () => (
                     Years Experience
                 </p>
             </div>
-        </div>
+        </div> */}
 
         <div className="h-px w-full bg-gradient-to-r from-primary/5 via-primary/20 to-primary/5" />
     </motion.div>
