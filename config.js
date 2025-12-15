@@ -10,8 +10,7 @@ export const config = {
         email: "anzaljoffl@gmail.com",
         location: "Kochi, Kerala, India",
         linkedin: "linkedin.com/in/m-anzal-javed",
-        github: "github.com/anzaljaved",
-        portfolio: "anzalj-portfolio.netlify.app"
+        github: "github.com/anzaljaved"
     },
     social: {
         github: "AnzalJaved",
@@ -174,12 +173,6 @@ export const config = {
             label: "Location",
             value: "Kochi, Kerala, India",
             link: null
-        },
-        {
-            icon: <HiBriefcase className="w-5 h-5" />,
-            label: "Portfolio",
-            value: "anzalj-portfolio.netlify.app",
-            link: "https://anzalj-portfolio.netlify.app"
         }
     ]
 }

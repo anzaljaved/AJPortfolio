@@ -15,12 +15,12 @@ const geistSans = localFont({
 });
 
 export const metadata = {
-  title: "Anzal\'s Portfolio",
+  title: "Anzal | Software Developer",
   icons:{
 icon: "/logo.png"
   },
   description: "Experienced fullstack developer specializing in modern web technologies. View my projects, skills, and experience.",
-  keywords: "fullstack developer,backend developer, frontend developer, web development, JavaScript,JS, C#, CSharp, React, Node.js, portfolio",
+  keywords: "fullstack developer, backend developer, frontend developer, web development, JavaScript, JS, C#, CSharp, React, Node.js",
   author: "Anzal Javed",
   robots: "index, follow",
 };

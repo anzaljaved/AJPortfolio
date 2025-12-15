@@ -297,7 +297,7 @@ const GithubProjects = () => {
                                 transition={{ delay: 0.2 }}
                                 className="text-base sm:text-lg text-muted-foreground px-4"
                             >
-                                Check out my public portfolio projects on Github
+                                Check out my public projects on GitHub
                             </motion.p>
                         </div>
 
