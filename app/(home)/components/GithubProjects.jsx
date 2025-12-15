@@ -245,13 +245,15 @@ const GithubProjects = () => {
     const projects = React.useMemo(() => {
         if (!data) return [];
         const filtered = data
-            .filter(project => 
-                !project.fork && 
-                !project.private && 
-                (project.name.toLowerCase().includes('portfolio') || 
-                 (project.topics && project.topics.some(topic => topic.toLowerCase().includes('portfolio'))))
-            )
-            .sort((a, b) => b.stargazers_count - a.stargazers_count)
+            .filter(project => !project.fork && !project.private)
+            .sort((a, b) => {
+                // Sort by stargazers count first
+                if (b.stargazers_count !== a.stargazers_count) {
+                    return b.stargazers_count - a.stargazers_count;
+                }
+                // Then by last updated
+                return new Date(b.updated_at) - new Date(a.updated_at);
+            })
             .slice(0, ITEMS_PER_PAGE * page);
         
         return filtered.map((project, index) => ({

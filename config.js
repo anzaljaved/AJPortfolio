@@ -5,43 +5,58 @@ export const config = {
     developer: {
         name: "Anzal",
         fullName: "M Anzal Javed",
+        title: "BCA Student | Aspiring Software Developer",
+        phone: "+91 7736709268",
+        email: "anzaljoffl@gmail.com",
+        location: "Kochi, Kerala, India",
+        linkedin: "linkedin.com/in/m-anzal-javed",
+        github: "github.com/anzaljaved",
+        portfolio: "anzalj-portfolio.netlify.app"
     },
     social: {
         github: "AnzalJaved",
-        discord: "#"
+        linkedin: "m-anzal-javed"
     },
     NAV_ITEMS: [
         { href: '/projects', label: 'Projects' },
         { href: '/contact', label: 'Contact' }
     ],
-    recentTracks: true, // Enable/disable Spotify recent tracks
+    recentTracks: false, // Disable Spotify recent tracks
+    
+    // Executive Summary
+    summary: "Final-year BCA student with hands-on experience in building web applications using JavaScript, PHP, and SQL. Currently learning the MERN stack while developing a strong foundation in software engineering concepts through academic projects and hackathons. Quick learner with a keen interest in backend and full-stack development.",
+    
+    // Projects Section
     projects: [
         {
             id: 1,
-            title: "Project Management and Team Collaborating System",
-            description: "A full-stack project management platform that enables Scrum-style collaboration between Admins, Team Leaders, and Members. It simplifies sprint planning, task assignment, and team communication within a single company environment.",
+            title: "TeamSphere",
+            description: "Developed a project management system enabling task assignment, Scrum workflow, sprints, and tracking progress. Implemented user authentication, team-based task visibility, and role-based access. Designed UI using HTML/CSS with responsive components for usability.",
             image: "/projects/TeamSphere.png",
-            technologies: ["JavaScript" , "TypeScript", "Tailwind CSS", "PHP", "MySQL", "HTML"],
+            technologies: ["JavaScript", "PHP", "Tailwindcss","MySQL"],
+            period: "MAY-SEPT 2025",
             github: "#",
             demo: "#"
         },
         {
             id: 2,
-            title: "Visual Note Taking Web App",
-            description: "A web application that allows users to take notes and save them in a visual format in an infinite whiteboard. Features include adding notes, drag and drop, todos, and grouping notes under columns.",
-            image: "/projects/SnapNote.png",
-            technologies: ["HTML", "JavaScript" , "TypeScript"],
+            title: "Health Archive",
+            description: "Built a CRUD-based patient management system for storing and retrieving medical records securely and implemented appointment booking functionality. Designed structured front-end UI with form validation and user-friendly layout.",
+            image: "/projects/HealthArchive.png",
+            technologies: ["PHP", "JavaScript", "MySQL"],
+            period: "MARCH 2025",
             github: "#",
-            demo: "https://snapnote-by-anzal.netlify.app"
+            demo: "#"
         },
         {
             id: 3,
-            title: "Health Archive",
-            description: "A unified digital Health Archive system that allows patients to carry a single ID to any hospital, enabling doctors to instantly access complete medical histories, prescriptions, and ongoing treatments. Designed with critical-condition indicators and real-time medication tracking, it ensures faster, safer, and more informed care across multiple healthcare providers.",
-            image: "/projects/HealthArchive.png",
-            technologies: ["JavaScript", "Tailwind CSS", "PHP", "MySQL", "HTML"],
+            title: "Snapnote",
+            description: "Developed an interactive drag-and-drop system for sticky notes and to-do items. Added customizable features including color tagging, layout adjustments, and grouping feature for better visual organization. Currently building backend support for account-based saving and cross-device syncing (in progress).",
+            image: "/projects/SnapNote.png",
+            technologies: ["JavaScript", "HTML", "CSS"],
+            period: "JAN 2025",
             github: "#",
-            demo: "#"
+            demo: "https://snapnote-by-anzal.netlify.app"
         },
         {
             id: 4,
@@ -50,89 +65,98 @@ export const config = {
             image: "/projects/Liora.png",
             technologies: ["Unity", "C#", "Cinemachine", "Pixel Art", "Mobile Controls"],
             github: "#",
-            demo: "#"
+            demo: "https://snapnote-by-anzal.netlify.app"
         }
- 
+        
     ],
+
+    // Achievements Section
+    achievements: [
+        {
+            title: "24-Hour Hackathon Winner",
+            date: "March 2025",
+            description: "Winner of a 24-hour Hackathon conducted by MITS Kochi, where I led a team of 3 to design and build a functional software solution under time constraints."
+        },
+        {
+            title: "UI Designing – Second Prize",
+            date: "Dec 2024",
+            description: "Secured 2nd place in UI Designing competition hosted by Sacred Hearts College. This recognition reflected my ability to understand user needs, design intuitive user interfaces."
+        }
+    ],
+
+    // Technical Skills Section
     skills: [
         {
-            title: "Frontend",
+            title: "Languages",
             icon: <HiCode />,
-            description: "Modern web interfaces",
+            description: "Programming & Markup",
             bgClass: "bg-blue-500/10",
             iconClass: "text-blue-500",
             skills: [
-                { name: "Next.js 15", level: "Advanced", hot: true },
-                { name: "React", level: "Advanced" },
-                { name: "TailwindCSS", level: "Expert" },
                 { name: "JavaScript", level: "Advanced" },
-                { name: "Framer Motion", level: "Intermediate" }
+                { name: "TypeScript", level: "Intermediate" },
+                { name: "Python", level: "Intermediate" },
+                { name: "C#", level: "Basic" },
+                { name: "PHP", level: "Intermediate" },
+                { name: "HTML/CSS", level: "Advanced" }
             ]
         },
         {
-            title: "Backend",
+            title: "Frontend",
+            icon: <HiCode />,
+            description: "Web Development",
+            bgClass: "bg-purple-500/10",
+            iconClass: "text-purple-500",
+            skills: [
+                { name: "React", level: "Intermediate" },
+                { name: "Tailwind CSS", level: "Intermediate" },
+                { name: "HTML5", level: "Advanced" },
+                { name: "CSS3", level: "Advanced" }
+            ]
+        },
+        {
+            title: "Backend & Databases",
             icon: <HiDatabase />,
-            description: "Server & Database",
+            description: "Server & Data Management",
             bgClass: "bg-emerald-500/10",
             iconClass: "text-emerald-500",
             skills: [
-                { name: "Node.js", level: "Advanced", hot: true },
-                { name: "MongoDB", level: "Advanced" },
-                { name: "Express.js", level: "Advanced", hot: true }
+                { name: "Node.js", level: "Intermediate" },
+                { name: "Express.js", level: "Intermediate" },
+                { name: "MySQL", level: "Intermediate" },
+                { name: "MongoDB", level: "Basic" },
+                { name: "REST APIs", level: "Intermediate" }
             ]
         },
         {
-            title: "Programs & Tools",
+            title: "Tools & DevOps",
             icon: <HiCube />,
-            description: "Development & Productivity Tools",
+            description: "Development & Deployment",
             bgClass: "bg-orange-500/10",
             iconClass: "text-orange-500",
             skills: [
-                { name: "VS Code", level: "Expert", hot: true },
-                { name: "Postman", level: "Advanced" },
-                { name: "Photoshop", level: "Intermediate" },
-                { name: "Git", level: "Advanced" }
+                { name: "Git", level: "Intermediate" },
+                { name: "GitHub", level: "Intermediate" },
+                { name: "AWS", level: "Basic" },
+                { name: "Netlify", level: "Intermediate" },
+                { name: "Version Control", level: "Intermediate" }
             ]
         }
     ],
-    experiences: [
+
+    // Education Section
+    education: [
         {
-            position: "Frontend Developer",
-            company: "SelectSkillSet",
-            period: "2024 - Present",
-            location: "Remote",
-            description: "Developing modern, responsive frontend applications with focus on user experience and performance. Working with cutting-edge technologies to build scalable web solutions.",
-            responsibilities: [
-                "Building responsive and interactive user interfaces using React and Next.js",
-                "Implementing modern UI/UX designs with TailwindCSS and Framer Motion",
-                "Optimizing application performance and ensuring cross-browser compatibility",
-                "Collaborating with design and backend teams to deliver high-quality features"
-            ],
-            technologies: ["React", "Next.js", "TailwindCSS", "JavaScript", "Framer Motion", "TypeScript"]
-        },
-        {
-            position: "Full Stack Developer",
-            company: "Tekisky",
-            period: "2023 - 2024",
-            location: "Remote",
-            description: "Developed and maintained full-stack web applications, working on both frontend and backend systems. Collaborated with cross-functional teams to deliver robust software solutions.",
-            responsibilities: [
-                "Developed and maintained full-stack web applications using React, Node.js, and MongoDB",
-                "Implemented RESTful APIs and integrated third-party services",
-                "Built responsive user interfaces and optimized application performance",
-                "Worked on database design and backend architecture"
-            ],
-            technologies: ["React", "Node.js", "MongoDB", "Express", "JavaScript", "MERN Stack"]
+            degree: "Bachelor of Computer Application (BCA)",
+            institution: "St. Thomas Arts & Science College",
+            period: "2023 - 2026",
+            description: "CGPA - 8.22 (First 4 Semesters)",
+            location: "Kerala, India"
         }
     ],
+
+    // Contact Information
     contactInfo: [
-     
-        {
-            icon: <FaGithub className="w-5 h-5" />,
-            label: "GitHub",
-            value: "@anzaljaved",
-            link: `https://github.com/anzaljaved`
-        },
         {
             icon: <HiMail className="w-5 h-5" />,
             label: "Email",
@@ -140,10 +164,22 @@ export const config = {
             link: "mailto:anzaljoffl@gmail.com"
         },
         {
+            icon: <FaGithub className="w-5 h-5" />,
+            label: "GitHub",
+            value: "github.com/anzaljaved",
+            link: "https://github.com/anzaljaved"
+        },
+        {
             icon: <FaMapPin className="w-5 h-5" />,
             label: "Location",
-            value: "India",
+            value: "Kochi, Kerala, India",
             link: null
+        },
+        {
+            icon: <HiBriefcase className="w-5 h-5" />,
+            label: "Portfolio",
+            value: "anzalj-portfolio.netlify.app",
+            link: "https://anzalj-portfolio.netlify.app"
         }
     ]
 }

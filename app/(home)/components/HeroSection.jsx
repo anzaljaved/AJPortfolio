@@ -51,44 +51,65 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6">
         <motion.div
-          variants={containerAnimation}
-          initial="hidden"
-          animate="show"
-          className="max-w-3xl mx-auto text-center space-y-8 relative"
+          variants={containerAnimation}          className="max-w-4xl mx-auto space-y-8 relative"
         >
           <motion.div
             variants={itemAnimation}
             className="inline-flex items-center space-x-2 bg-secondary/10 border-[1.8px] border-zinc-900/70 px-4 py-2 rounded-full text-primary backdrop-blur-sm"
           >
             <HiCode className="w-5 h-5" />
-            <span className="text-sm font-medium">Welcome to my portfolio</span>
+            <span className="text-sm font-medium">Hello, I'm {config.developer.name}</span>
           </motion.div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 text-left">
             <motion.h1
               variants={itemAnimation}
-              className="text-4xl md:text-7xl font-bold tracking-tight"
+              className="text-4xl md:text-6xl font-bold tracking-tight"
             >
               <motion.span
                 variants={textAnimation}
                 className="block text-primary mb-2"
               >
-                Hi, I'm {config.developer.name}
+                {config.developer.fullName}
               </motion.span>
               <motion.span
                 variants={textAnimation}
-                className="block text-white/60 text-2xl md:text-4xl"
+                className="block text-white/80 text-2xl md:text-3xl mt-4"
               >
-I build web that builds brands.              </motion.span>
+                {config.developer.title}
+              </motion.span>
             </motion.h1>
           </div>
 
-          <motion.p
+          <motion.div 
             variants={itemAnimation}
-            className="text-base sm:text-md text-muted-foreground leading-relaxed max-w-2xl mx-auto"
+            className="space-y-6 text-left"
           >
-           Full-stack builder creating digital experiences that respect humans and scale with clarity. Accessibility is my north star.
-          </motion.p>
+            <div className="space-y-4">
+              <p className="text-lg text-white/80 leading-relaxed">
+                {config.summary}
+              </p>
+              
+              <div className="flex flex-wrap gap-4 pt-2">
+                {config.contactInfo.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.link || '#'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
+                  >
+                    <span className="text-primary">
+                      {item.icon}
+                    </span>
+                    <span>{item.value}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          
 
           <motion.div
             variants={itemAnimation}
