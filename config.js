@@ -30,7 +30,7 @@ export const config = {
         {
             id: 1,
             title: "ThinkNote",
-            description: "Full-Stack Note taking App built with the MERN Stack (MongoDB, Express, React, Node) that lets users create, update, and delete notes with title & description. Fully Functional REST API Rate Limiting with Upstash Redis along with Responsive UI",
+            description: "Built a Full-Stack Note taking App with the MERN Stack that lets users create, update, and delete notes with title & description. Fully Functional REST API Rate Limiting with Upstash Redis along with Responsive UI",
             image: "/projects/ThinkNote.png",
             technologies: ["MongoDB", "Express", "React", "Node", "Upstash Redis", "Tailwind CSS", "Render"],
             period: "DEC 2025",
@@ -70,7 +70,7 @@ export const config = {
         {
             id: 5,
             title: "2D Unity Game",
-            description: "A 2D local multiplayer cat-themed platformer built using Unity and Cinemachine, featuring pixel art, dialogues, and mobile controls.",
+            description: "Created a 2D local multiplayer cat-themed platformer built using Unity, featuring pixel art, dialogues, and mobile controls.",
             image: "/projects/Liora.png",
             technologies: ["Unity", "C#", "Cinemachine", "Pixel Art", "Mobile Controls"],
             github: "#",

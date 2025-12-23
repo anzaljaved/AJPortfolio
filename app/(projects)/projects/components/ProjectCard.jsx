@@ -33,7 +33,7 @@ export const ProjectCard = ({ project, index }) => (
                     </span>
                 </div>
 
-                <p className="text-sm text-muted-foreground line-clamp-2">
+                <p className="text-sm text-muted-foreground line-clamp-3">
                     {project.description}
                 </p>
 
