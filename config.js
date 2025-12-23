@@ -29,6 +29,16 @@ export const config = {
     projects: [
         {
             id: 1,
+            title: "ThinkNote",
+            description: "Full-Stack Note taking App built with the MERN Stack (MongoDB, Express, React, Node) that lets users create, update, and delete notes with title & description. Fully Functional REST API Rate Limiting with Upstash Redis along with Responsive UI",
+            image: "/projects/ThinkNote.png",
+            technologies: ["MongoDB", "Express", "React", "Node", "Upstash Redis", "Tailwind CSS", "Render"],
+            period: "DEC 2025",
+            github: "https://github.com/anzaljaved/ThinkNote",
+            demo: "https://thinknote-whcr.onrender.com"
+        },
+        {
+            id: 2,
             title: "TeamSphere",
             description: "Developed a project management system enabling task assignment, Scrum workflow, sprints, and tracking progress. Implemented user authentication, team-based task visibility, and role-based access. Designed UI using HTML/CSS with responsive components for usability.",
             image: "/projects/TeamSphere.png",
@@ -38,7 +48,7 @@ export const config = {
             demo: "#"
         },
         {
-            id: 2,
+            id: 3,
             title: "Health Archive",
             description: "Built a CRUD-based patient management system for storing and retrieving medical records securely and implemented appointment booking functionality. Designed structured front-end UI with form validation and user-friendly layout.",
             image: "/projects/HealthArchive.png",
@@ -48,7 +58,7 @@ export const config = {
             demo: "#"
         },
         {
-            id: 3,
+            id: 4,
             title: "Snapnote",
             description: "Developed an interactive drag-and-drop system for sticky notes and to-do items. Added customizable features including color tagging, layout adjustments, and grouping feature for better visual organization. Currently building backend support for account-based saving and cross-device syncing (in progress).",
             image: "/projects/SnapNote.png",
@@ -58,7 +68,7 @@ export const config = {
             demo: "https://snapnote-by-anzal.netlify.app"
         },
         {
-            id: 4,
+            id: 5,
             title: "2D Unity Game",
             description: "A 2D local multiplayer cat-themed platformer built using Unity and Cinemachine, featuring pixel art, dialogues, and mobile controls.",
             image: "/projects/Liora.png",
