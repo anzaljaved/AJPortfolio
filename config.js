@@ -21,10 +21,10 @@ export const config = {
         { href: '/contact', label: 'Contact' }
     ],
     recentTracks: false, // Disable Spotify recent tracks
-    
+
     // Executive Summary
     summary: "Final-year BCA student with hands-on experience in building web applications using JavaScript, PHP, and SQL. Currently learning the MERN stack while developing a strong foundation in software engineering concepts through academic projects and hackathons. Quick learner with a keen interest in backend and full-stack development.",
-    
+
     // Projects Section
     projects: [
         {
@@ -42,7 +42,7 @@ export const config = {
             title: "TeamSphere",
             description: "Developed a project management system enabling task assignment, Scrum workflow, sprints, and tracking progress. Implemented user authentication, team-based task visibility, and role-based access. Designed UI using HTML/CSS with responsive components for usability.",
             image: "/projects/TeamSphere.png",
-            technologies: ["JavaScript", "PHP", "Tailwindcss","MySQL"],
+            technologies: ["JavaScript", "PHP", "Tailwindcss", "MySQL"],
             period: "MAY-SEPT 2025",
             github: "#",
             demo: "#"
@@ -76,7 +76,7 @@ export const config = {
             github: "#",
             demo: "#"
         }
-        
+
     ],
 
     // Achievements Section
@@ -84,7 +84,7 @@ export const config = {
         {
             title: "24-Hour Hackathon Winner",
             date: "March 2025",
-            description: "Winner of a 24-hour Hackathon conducted by MITS Kochi, where I led a team of 3 to design and build a functional software solution under time constraints."
+            description: "Winner of a 24-hour Hackathon conducted by MITS Kochi, where I led a team of 4 to design and build a functional software solution under time constraints."
         },
         {
             title: "UI Designing – Second Prize",
@@ -159,7 +159,7 @@ export const config = {
             degree: "Bachelor of Computer Application (BCA)",
             institution: "St. Thomas Arts & Science College",
             period: "2023 - 2026",
-            description: "CGPA - 8.22 (First 4 Semesters)",
+            description: "CGPA - 8.3 (First 5 Semesters)",
             location: "Kerala, India"
         }
     ],
